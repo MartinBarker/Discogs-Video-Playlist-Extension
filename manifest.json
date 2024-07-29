@@ -1,23 +1,40 @@
 {
   "manifest_version": 3,
-  "name": "Color Changer with Sidebar",
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
   "version": "1.0",
-  "description": "Changes webpage background color and includes a sidebar",
-  "permissions": ["activeTab", "storage", "sidePanel"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content_scripts/content.js"]
-    }
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://www.discogs.com/*"
   ],
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_title": "Click to open my note"
   },
   "side_panel": {
-    "default_path": "sidebar.html",
+    "default_path": "panel.html",
     "openPanelOnActionClick": true
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "offline_enabled": true,
+  "icons": {
+    "16": "images/icon16.png",
+    "24": "images/icon24.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "96": "images/icon96.png",
+    "128": "images/icon128.png"
   }
 }
