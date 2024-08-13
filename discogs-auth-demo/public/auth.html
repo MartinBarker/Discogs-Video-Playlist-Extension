@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discogs Authentication</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const authUrl = urlParams.get('authUrl');
+            if (authUrl) {
+                window.location.href = authUrl;
+            } else {
+                document.body.innerHTML = '<p>Error: No authentication URL provided.</p>';
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

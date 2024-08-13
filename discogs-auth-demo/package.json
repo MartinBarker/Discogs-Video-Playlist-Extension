@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "discogs": "^0.4.4",
+    "disconnect": "^1.2.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "oauth": "^0.10.0"
+  }
+}
