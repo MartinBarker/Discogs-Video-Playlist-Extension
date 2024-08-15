@@ -1,2 +1,4 @@
 .env
 ./discogs-auth-demo/node_modules
+discogs-auth-demo/node_modules/
+node_modules/
